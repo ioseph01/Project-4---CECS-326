@@ -24,6 +24,7 @@ void add(char *name, int priority, int burst) {
 
     struct task *newTask = malloc(sizeof(struct task));
     newTask->name = name;
+    newTask->priority = priority;
     newTask->burst = burst;
     if (head) {
         insert(&(tail->next), newTask);
